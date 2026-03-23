@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula 5 — Programação para Internet</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f4f0; font-family: sans-serif; color: #1a1a1a; font-size: 15px; line-height: 1.7;">
+
+  <!-- CABEÇALHO -->
+  <header style="background-color: #1a1a1a; padding: 18px 48px; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-size: 13px; color: #c8f135; margin: 0; letter-spacing: 0.08em;">prog.internet</p>
+    <nav style="display: flex; gap: 28px; align-items: center;">
+      <a href="#cores" style="font-size: 13px; color: #888; text-decoration: none;">cores</a>
+      <a href="#flexbox" style="font-size: 13px; color: #888; text-decoration: none;">flexbox</a>
+      <a href="#blog" style="font-size: 13px; color: #888; text-decoration: none;">site completo</a>
+      <p style="font-size: 11px; color: #1a1a1a; background-color: #c8f135; padding: 4px 12px; border-radius: 99px; margin: 0;">aula 05</p>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section style="padding: 72px 48px 56px; border-bottom: 1px solid #ddd;">
+    <p style="font-size: 11px; color: #888; letter-spacing: 0.1em; margin: 0 0 16px;">programação para internet — aula 05</p>
+    <h1 style="font-size: 46px; font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 24px;">CSS na prática</h1>
+    <p style="font-size: 15px; color: #555; max-width: 560px; line-height: 1.85; margin: 0 0 32px;">
+      Esta página foi construída usando apenas tags HTML com <strong>CSS inline</strong> — o mesmo <code>style=""</code> que você escreve nos exercícios. Cada seção mostra o código e o resultado ao lado.
+    </p>
+    <section style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <p style="font-size: 11px; border: 1px solid #ccc; padding: 5px 12px; border-radius: 99px; color: #666; margin: 0;">color</p>
+      <p style="font-size: 11px; border: 1px solid #ccc; padding: 5px 12px; border-radius: 99px; color: #666; margin: 0;">background-color</p>
+      <p style="font-size: 11px; border: 1px solid #ccc; padding: 5px 12px; border-radius: 99px; color: #666; margin: 0;">display: flex</p>
+      <p style="font-size: 11px; border: 1px solid #ccc; padding: 5px 12px; border-radius: 99px; color: #666; margin: 0;">justify-content</p>
+      <p style="font-size: 11px; border: 1px solid #ccc; padding: 5px 12px; border-radius: 99px; color: #666; margin: 0;">flex: 1</p>
+    </section>
+  </section>
+
+  <!-- COMO LER -->
+  <section style="padding: 20px 48px; background-color: #1a1a1a; display: flex; gap: 40px; align-items: center;">
+    <p style="font-size: 12px; color: #c8f135; margin: 0; white-space: nowrap;">como ler esta página</p>
+    <section style="display: flex; gap: 32px;">
+      <section style="display: flex; align-items: center; gap: 10px;">
+        <p style="font-size: 10px; background-color: #2e2e2e; color: #888; padding: 3px 10px; border-radius: 4px; margin: 0;">código</p>
+        <p style="font-size: 12px; color: #666; margin: 0;">o que você escreve no editor</p>
+      </section>
+      <section style="display: flex; align-items: center; gap: 10px;">
+        <p style="font-size: 10px; background-color: #c8f135; color: #1a1a1a; padding: 3px 10px; border-radius: 4px; margin: 0;">resultado</p>
+        <p style="font-size: 12px; color: #666; margin: 0;">o que aparece no navegador</p>
+      </section>
+    </section>
+  </section>
+
+  <!-- 01 — CORES -->
+  <section id="cores" style="padding: 64px 48px; border-bottom: 1px solid #ddd;">
+
+    <p style="font-size: 11px; color: #888; margin: 0 0 8px;">01</p>
+    <h2 style="font-size: 26px; font-weight: 500; margin: 0 0 8px;">cores e texto</h2>
+    <p style="font-size: 14px; color: #666; margin: 0 0 40px; max-width: 520px;">
+      A propriedade <code>color</code> muda a cor do texto. A propriedade <code>background-color</code> muda o fundo. Ambas aceitam HEX ou HSL.
+    </p>
+
+    <!-- exemplo 1.1 -->
+    <p style="font-size: 11px; color: #aaa; margin: 0 0 12px;">exemplo 1.1 — color</p>
+    <section style="display: flex; gap: 16px; margin-bottom: 40px;">
+
+      <section style="flex: 1; background-color: #1e1e1e; border-radius: 10px; overflow: hidden;">
+        <section style="padding: 10px 16px; border-bottom: 1px solid #2e2e2e; display: flex; justify-content: space-between; align-items: center;">
+          <p style="font-size: 11px; color: #555; margin: 0;">código</p>
+          <p style="font-size: 10px; background-color: #2a2a2a; color: #888; padding: 2px 8px; border-radius: 4px; margin: 0;">CSS inline</p>
+        </section>
+        <pre style="margin: 0; padding: 20px; font-size: 12px; line-height: 1.9; color: #ccc; overflow-x: auto;">&lt;h1 style="color: #c8f135;"&gt;
+  título em verde
+&lt;/h1&gt;
+
+&lt;p style="color: #888888;"&gt;
+  parágrafo em cinza
+&lt;/p&gt;
+
+&lt;p style="color: hsl(0, 80%, 55%);"&gt;
+  parágrafo em vermelho
+&lt;/p&gt;</pre>
+      </section>
+
+      <section style="flex: 1; background-color: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #e0e0e0;">
+        <section style="padding: 10px 16px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+          <p style="font-size: 11px; color: #aaa; margin: 0;">resultado</p>
+          <p style="font-size: 10px; background-color: #c8f135; color: #1a1a1a; padding: 2px 8px; border-radius: 4px; margin: 0;">navegador</p>
+        </section>
+        <section style="padding: 24px;">
+          <h1 style="color: #4a9e1a; font-size: 22px; margin: 0 0 8px;">título em verde</h1>
+          <p style="color: #888888; margin: 0 0 6px; font-size: 14px;">parágrafo em cinza</p>
+          <p style="color: hsl(0, 80%, 55%); margin: 0; font-size: 14px;">parágrafo em vermelho</p>
+        </section>
+      </section>
+
+    </section>
+
+    <!-- exemplo 1.2 -->
+    <p style="font-size: 11px; color: #aaa; margin: 0 0 12px;">exemplo 1.2 — background-color e padding</p>
+    <section style="display: flex; gap: 16px; margin-bottom: 32px;">
+
+      <section style="flex: 1; background-color: #1e1e1e; border-radius: 10px; overflow: hidden;">
+        <section style="padding: 10px 16px; border-bottom: 1px solid #2e2e2e;">
+          <p style="font-size: 11px; color: #555; margin: 0;">código</p>
+        </section>
+        <pre style="margin: 0; padding: 20px; font-size: 12px; line-height: 1.9; color: #ccc; overflow-x: auto;">&lt;p style="background-color: hsl(200, 70%, 90%);
+       color: hsl(200, 70%, 25%);
+       padding: 12px 16px;
+       border-radius: 8px;"&gt;
+  aviso informativo
+&lt;/p&gt;
+
+&lt;p style="background-color: hsl(0, 70%, 92%);
+       color: hsl(0, 70%, 30%);
+       padding: 12px 16px;
+       border-radius: 8px;"&gt;
+  aviso de erro
+&lt;/p&gt;</pre>
+      </section>
+
+      <section style="flex: 1; background-color: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #e0e0e0;">
+        <section style="padding: 10px 16px; border-bottom: 1px solid #eee;">
+          <p style="font-size: 11px; color: #aaa; margin: 0;">resultado</p>
+        </section>
+        <section style="padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+          <p style="background-color: hsl(200, 70%, 90%); color: hsl(200, 70%, 25%); padding: 12px 16px; border-radius: 8px; margin: 0; font-size: 14px;">aviso informativo</p>
+          <p style="background-color: hsl(0, 70%, 92%); color: hsl(0, 70%, 30%); padding: 12px 16px; border-radius: 8px; margin: 0; font-size: 14px;">aviso de erro</p>
+        </section>
+      </section>
+
+    </section>
+
+    <!-- nota hsl -->
+    <section style="background-color: #fffbe6; border-left: 3px solid #f0c040; border-radius: 0 8px 8px 0; padding: 14px 18px; max-width: 700px;">
+      <p style="margin: 0 0 4px; font-size: 13px; font-weight: 500; color: #7a5c00;">por que usar HSL?</p>
+      <p style="margin: 0; font-size: 13px; color: #7a5c00; line-height: 1.7;">Para deixar uma cor mais clara aumente o terceiro valor. Para mais escura, diminua. Com HEX você teria que recalcular tudo do zero.</p>
+    </section>
+
+  </section>
+
+  <!-- 02 — FLEXBOX -->
+  <section id="flexbox" style="padding: 64px 48px; border-bottom: 1px solid #ddd;">
+
+    <p style="font-size: 11px; color: #888; margin: 0 0 8px;">02</p>
+    <h2 style="font-size: 26px; font-weight: 500; margin: 0 0 8px;">flexbox</h2>
+    <p style="font-size: 14px; color: #666; margin: 0 0 40px; max-width: 540px;">
+      Por padrão elementos ficam empilhados. O <code>display: flex</code> no elemento pai faz os filhos ficarem lado a lado automaticamente.
+    </p>
+
+    <!-- exemplo 2.1 -->
+    <p style="font-size: 11px; color: #aaa; margin: 0 0 12px;">exemplo 2.1 — sem flex vs com flex</p>
+    <section style="display: flex; gap: 16px; margin-bottom: 40px;">
+
+      <section style="flex: 1; background-color: #1e1e1e; border-radius: 10px; overflow: hidden;">
+        <section style="padding: 10px 16px; border-bottom: 1px solid #2e2e2e;">
+          <p style="font-size: 11px; color: #555; margin: 0;">código</p>
+        </section>
+        <pre style="margin: 0; padding: 20px; font-size: 12px; line-height: 1.9; color: #ccc; overflow-x: auto;">&lt;!-- SEM flex — empilhados --&gt;
+&lt;section&gt;
+  &lt;p&gt;item 1&lt;/p&gt;
+  &lt;p&gt;item 2&lt;/p&gt;
+  &lt;p&gt;item 3&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;!-- COM flex — lado a lado --&gt;
+&lt;section style="display: flex; gap: 12px;"&gt;
+  &lt;p&gt;item 1&lt;/p&gt;
+  &lt;p&gt;item 2&lt;/p&gt;
+  &lt;p&gt;item 3&lt;/p&gt;
+&lt;/section&gt;</pre>
+      </section>
+
+      <section style="flex: 1; background-color: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #e0e0e0;">
+        <section style="padding: 10px 16px; border-bottom: 1px solid #eee;">
+          <p style="font-size: 11px; color: #aaa; margin: 0;">resultado</p>
+        </section>
+        <section style="padding: 24px; display: flex; gap: 24px;">
+          <section style="flex: 1;">
+            <p style="font-size: 10px; color: #bbb; margin: 0 0 8px;">sem flex</p>
+            <p style="background: #f0f0f0; padding: 8px 12px; border-radius: 6px; font-size: 13px; margin: 0 0 6px;">item 1</p>
+            <p style="background: #f0f0f0; padding: 8px 12px; border-radius: 6px; font-size: 13px; margin: 0 0 6px;">item 2</p>
+            <p style="background: #f0f0f0; padding: 8px 12px; border-radius: 6px; font-size: 13px; margin: 0;">item 3</p>
+          </section>
+          <section style="flex: 1;">
+            <p style="font-size: 10px; color: #4a9e1a; margin: 0 0 8px;">com flex</p>
+            <section style="display: flex; gap: 6px;">
+              <p style="background: #f0f0f0; padding: 8px 12px; border-radius: 6px; font-size: 13px; margin: 0; flex: 1; text-align: center;">item 1</p>
+              <p style="background: #f0f0f0; padding: 8px 12px; border-radius: 6px; font-size: 13px; margin: 0; flex: 1; text-align: center;">item 2</p>
+              <p style="background: #f0f0f0; padding: 8px 12px; border-radius: 6px; font-size: 13px; margin: 0; flex: 1; text-align: center;">item 3</p>
+            </section>
+          </section>
+        </section>
+      </section>
+
+    </section>
+
+    <!-- exemplo 2.2 -->
+    <p style="font-size: 11px; color: #aaa; margin: 0 0 12px;">exemplo 2.2 — justify-content: space-between (menu)</p>
+    <section style="display: flex; gap: 16px; margin-bottom: 40px;">
+
+      <section style="flex: 1; background-color: #1e1e1e; border-radius: 10px; overflow: hidden;">
+        <section style="padding: 10px 16px; border-bottom: 1px solid #2e2e2e;">
+          <p style="font-size: 11px; color: #555; margin: 0;">código</p>
+        </section>
+        <pre style="margin: 0; padding: 20px; font-size: 12px; line-height: 1.9; color: #ccc; overflow-x: auto;">&lt;nav style="display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 14px 24px;
+          background-color: #1a1a1a;"&gt;
+
+  &lt;p style="color: #c8f135;"&gt;meu blog&lt;/p&gt;
+
+  &lt;section style="display: flex; gap: 20px;"&gt;
+    &lt;p style="color: #888;"&gt;inicio&lt;/p&gt;
+    &lt;p style="color: #888;"&gt;artigos&lt;/p&gt;
+    &lt;p style="color: #888;"&gt;sobre&lt;/p&gt;
+  &lt;/section&gt;
+
+&lt;/nav&gt;</pre>
+      </section>
+
+      <section style="flex: 1; background-color: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #e0e0e0;">
+        <section style="padding: 10px 16px; border-bottom: 1px solid #eee;">
+          <p style="font-size: 11px; color: #aaa; margin: 0;">resultado</p>
+        </section>
+        <section style="padding: 24px;">
+          <nav style="display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; background-color: #1a1a1a; border-radius: 8px;">
+            <p style="color: #c8f135; margin: 0; font-size: 14px; font-weight: 500;">meu blog</p>
+            <section style="display: flex; gap: 20px;">
+              <p style="color: #888; margin: 0; font-size: 13px;">inicio</p>
+              <p style="color: #888; margin: 0; font-size: 13px;">artigos</p>
+              <p style="color: #888; margin: 0; font-size: 13px;">sobre</p>
+            </section>
+          </nav>
+        </section>
+      </section>
+
+    </section>
+
+    <!-- exemplo 2.3 -->
+    <p style="font-size: 11px; color: #aaa; margin: 0 0 12px;">exemplo 2.3 — flex: 1 nos filhos</p>
+    <section style="display: flex; gap: 16px; margin-bottom: 32px;">
+
+      <section style="flex: 1; background-color: #1e1e1e; border-radius: 10px; overflow: hidden;">
+        <section style="padding: 10px 16px; border-bottom: 1px solid #2e2e2e;">
+          <p style="font-size: 11px; color: #555; margin: 0;">código</p>
+        </section>
+        <pre style="margin: 0; padding: 20px; font-size: 12px; line-height: 1.9; color: #ccc; overflow-x: auto;">&lt;section style="display: flex; gap: 16px;"&gt;
+
+  &lt;section style="flex: 1;
+               padding: 20px;
+               background-color: #f5f5f5;
+               border-radius: 10px;"&gt;
+    &lt;h3&gt;artigo 1&lt;/h3&gt;
+    &lt;p&gt;descrição do artigo&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section style="flex: 1; ..."&gt;
+    &lt;h3&gt;artigo 2&lt;/h3&gt;
+    &lt;p&gt;descrição do artigo&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section style="flex: 1; ..."&gt;
+    &lt;h3&gt;artigo 3&lt;/h3&gt;
+    &lt;p&gt;descrição do artigo&lt;/p&gt;
+  &lt;/section&gt;
+
+&lt;/section&gt;</pre>
+      </section>
+
+      <section style="flex: 1; background-color: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #e0e0e0;">
+        <section style="padding: 10px 16px; border-bottom: 1px solid #eee;">
+          <p style="font-size: 11px; color: #aaa; margin: 0;">resultado</p>
+        </section>
+        <section style="padding: 16px;">
+          <section style="display: flex; gap: 10px;">
+            <section style="flex: 1; padding: 16px; background-color: #f5f5f5; border-radius: 8px;">
+              <h3 style="font-size: 13px; font-weight: 500; margin: 0 0 4px;">artigo 1</h3>
+              <p style="font-size: 12px; color: #888; margin: 0;">descrição do artigo</p>
+            </section>
+            <section style="flex: 1; padding: 16px; background-color: #f5f5f5; border-radius: 8px;">
+              <h3 style="font-size: 13px; font-weight: 500; margin: 0 0 4px;">artigo 2</h3>
+              <p style="font-size: 12px; color: #888; margin: 0;">descrição do artigo</p>
+            </section>
+            <section style="flex: 1; padding: 16px; background-color: #f5f5f5; border-radius: 8px;">
+              <h3 style="font-size: 13px; font-weight: 500; margin: 0 0 4px;">artigo 3</h3>
+              <p style="font-size: 12px; color: #888; margin: 0;">descrição do artigo</p>
+            </section>
+          </section>
+        </section>
+      </section>
+
+    </section>
+
+    <!-- nota pai vs filho -->
+    <section style="background-color: #f0f7e6; border-left: 3px solid #6abf40; border-radius: 0 8px 8px 0; padding: 14px 18px; max-width: 700px;">
+      <p style="margin: 0 0 4px; font-size: 13px; font-weight: 500; color: #2d6a0a;">pai vs filho no flexbox</p>
+      <p style="margin: 0; font-size: 13px; color: #3a7a12; line-height: 1.7;"><code>display: flex</code>, <code>justify-content</code> e <code>gap</code> vão no <strong>pai</strong>. O <code>flex: 1</code> vai nos <strong>filhos</strong>. Os filhos viram itens flex automaticamente — sem precisar declarar nada neles além do <code>flex: 1</code>.</p>
+    </section>
+
+  </section>
+
+  <!-- 03 — BLOG COMPLETO -->
+  <section id="blog" style="padding: 64px 48px; border-bottom: 1px solid #ddd;">
+
+    <p style="font-size: 11px; color: #888; margin: 0 0 8px;">03</p>
+    <h2 style="font-size: 26px; font-weight: 500; margin: 0 0 8px;">tudo junto — um blog completo</h2>
+    <p style="font-size: 14px; color: #666; margin: 0 0 40px; max-width: 540px;">Abaixo está um blog funcional seguido do código que o gera. Tudo usando apenas CSS inline.</p>
+
+    <!-- BLOG DEMO -->
+    <section style="border: 1px solid #ddd; border-radius: 12px; overflow: hidden; margin-bottom: 24px; background-color: #fff;">
+
+      <nav style="display: flex; justify-content: space-between; align-items: center; padding: 16px 28px; border-bottom: 1px solid #eee;">
+        <p style="font-weight: 500; font-size: 15px; margin: 0; color: #111;">meu blog</p>
+        <section style="display: flex; gap: 24px;">
+          <p style="font-size: 13px; color: #555; margin: 0;">inicio</p>
+          <p style="font-size: 13px; color: #555; margin: 0;">artigos</p>
+          <p style="font-size: 13px; color: #555; margin: 0;">sobre</p>
+        </section>
+      </nav>
+
+      <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 48px 24px; background-color: #f9f9f9; border-bottom: 1px solid #eee; text-align: center;">
+        <h2 style="font-size: 22px; font-weight: 500; margin: 0 0 8px; color: #111;">bem-vindo ao meu blog</h2>
+        <p style="font-size: 14px; color: #888; margin: 0;">artigos sobre tecnologia e desenvolvimento web</p>
+      </section>
+
+      <section style="display: flex; gap: 16px; padding: 28px;">
+        <section style="flex: 1; border: 1px solid #eee; border-radius: 10px; padding: 18px;">
+          <h3 style="font-size: 14px; font-weight: 500; margin: 0 0 6px; color: #111;">o que é flexbox?</h3>
+          <p style="font-size: 12px; color: #888; margin: 0; line-height: 1.6;">aprenda a posicionar elementos com display flex.</p>
+        </section>
+        <section style="flex: 1; border: 1px solid #eee; border-radius: 10px; padding: 18px;">
+          <h3 style="font-size: 14px; font-weight: 500; margin: 0 0 6px; color: #111;">seletores explicados</h3>
+          <p style="font-size: 12px; color: #888; margin: 0; line-height: 1.6;">tag, classe e id — quando usar cada um.</p>
+        </section>
+        <section style="flex: 1; border: 1px solid #eee; border-radius: 10px; padding: 18px;">
+          <h3 style="font-size: 14px; font-weight: 500; margin: 0 0 6px; color: #111;">cores com hsl</h3>
+          <p style="font-size: 12px; color: #888; margin: 0; line-height: 1.6;">por que hsl é mais fácil de ajustar que hex.</p>
+        </section>
+      </section>
+
+    </section>
+
+    <!-- CÓDIGO DO BLOG -->
+    <section style="background-color: #1e1e1e; border-radius: 10px; overflow: hidden;">
+      <section style="padding: 10px 16px; border-bottom: 1px solid #2e2e2e; display: flex; justify-content: space-between; align-items: center;">
+        <p style="font-size: 11px; color: #555; margin: 0;">código completo do blog acima — 100% CSS inline</p>
+        <p style="font-size: 10px; background-color: #2a2a2a; color: #888; padding: 2px 8px; border-radius: 4px; margin: 0;">HTML + style=""</p>
+      </section>
+      <pre style="margin: 0; padding: 24px; font-size: 12px; line-height: 1.9; color: #ccc; overflow-x: auto;">&lt;!-- MENU --&gt;
+&lt;nav style="display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px 28px;"&gt;
+  &lt;p&gt;meu blog&lt;/p&gt;
+  &lt;section style="display: flex; gap: 24px;"&gt;
+    &lt;p&gt;inicio&lt;/p&gt;
+    &lt;p&gt;artigos&lt;/p&gt;
+    &lt;p&gt;sobre&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/nav&gt;
+
+&lt;!-- HERO --&gt;
+&lt;section style="display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               padding: 48px 24px;"&gt;
+  &lt;h2&gt;bem-vindo ao meu blog&lt;/h2&gt;
+  &lt;p&gt;artigos sobre tecnologia&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;!-- CARDS --&gt;
+&lt;section style="display: flex; gap: 16px; padding: 28px;"&gt;
+
+  &lt;section style="flex: 1;
+               border: 1px solid #eee;
+               border-radius: 10px;
+               padding: 18px;"&gt;
+    &lt;h3&gt;o que é flexbox?&lt;/h3&gt;
+    &lt;p&gt;aprenda a posicionar elementos...&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section style="flex: 1; ..."&gt;card 2&lt;/section&gt;
+  &lt;section style="flex: 1; ..."&gt;card 3&lt;/section&gt;
+
+&lt;/section&gt;</pre>
+    </section>
+
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer style="padding: 48px; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; background-color: #1a1a1a;">
+    <section>
+      <p style="font-size: 13px; font-weight: 500; color: #f0f0f0; margin: 0 0 12px;">o que vimos hoje</p>
+      <p style="font-size: 12px; color: #555; margin: 0 0 4px;">color e background-color</p>
+      <p style="font-size: 12px; color: #555; margin: 0 0 4px;">hsl vs hex</p>
+      <p style="font-size: 12px; color: #555; margin: 0 0 4px;">display: flex no pai</p>
+      <p style="font-size: 12px; color: #555; margin: 0 0 4px;">justify-content e gap</p>
+      <p style="font-size: 12px; color: #555; margin: 0;">flex: 1 nos filhos</p>
+    </section>
+    <section>
+      <p style="font-size: 13px; font-weight: 500; color: #f0f0f0; margin: 0 0 12px;">próximas aulas</p>
+      <p style="font-size: 12px; color: #555; margin: 0 0 4px;">aula 06 — css grid</p>
+      <p style="font-size: 12px; color: #555; margin: 0 0 4px;">aula 07 — position</p>
+      <p style="font-size: 12px; color: #555; margin: 0;">aula 08 — responsividade</p>
+    </section>
+    <section>
+      <p style="font-size: 13px; font-weight: 500; color: #f0f0f0; margin: 0 0 12px;">referência</p>
+      <p style="font-size: 12px; color: #555; margin: 0 0 4px;">MDN Web Docs</p>
+      <p style="font-size: 12px; color: #555; margin: 0;">developer.mozilla.org/pt-BR</p>
+    </section>
+    <p style="font-size: 11px; color: #333; align-self: flex-end; margin: 0;">prog.internet — aula 05</p>
+  </footer>
+
+</body>
+</html>
